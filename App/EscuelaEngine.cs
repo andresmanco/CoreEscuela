@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using CoreEscuela.Entidades;
-using Etapa1.Entidades;
+using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
-    public class EscuelaEngine
+    //Sealed permit inicializar mas no heredar d la clase
+    public sealed class EscuelaEngine
     {
         public Escuela Escuela { get; set; }
 

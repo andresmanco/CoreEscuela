@@ -13,9 +13,12 @@ namespace CoreEscuela
             var engine = new EscuelaEngine();
             engine.Inicializar();            
             imprimirCursosEscuela(engine.Escuela);
-            imprimirEvaluaciones(engine.Escuela);
 
-
+            Printer.DibujarLinea(20);
+            Printer.DibujarLinea(20);
+            Printer.DibujarLinea(20);
+            Printer.ImprimeTitulo("Pruebas de Polimorfismo");
+            var alumnoTest = new Alumno{Nombre= "Claire Underwood"};
         }
 
         private static void imprimirCursosEscuela(Escuela escuela)
@@ -30,24 +33,6 @@ namespace CoreEscuela
                     WriteLine($"Nombre: {curso.Nombre}, ID: {curso.UniqueId}");
                 }
             }
-        }
-
-        private static void imprimirEvaluaciones(Escuela escuela){
-            if(escuela?.Cursos != null)
-            {
-                foreach (var curso in escuela.Cursos)
-                {
-                    foreach (var alumno in curso.Alumnos)
-                    {
-                        foreach (var evaluacion in alumno.Evaluaciones)
-                        {
-                            Printer.DibujarLinea(50);
-                            WriteLine($"Asignatura: {evaluacion.Asignatura.Nombre}");
-                            WriteLine($"Nombre: {evaluacion.Nombre}, Alumno: {evaluacion.Alumno.Nombre}, Nota: {evaluacion.Nota}");
-                        }
-                    }
-                }
-            }
-        }
+        }  
     }
 }
