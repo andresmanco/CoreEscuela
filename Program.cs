@@ -13,7 +13,6 @@ namespace CoreEscuela
             var engine = new EscuelaEngine();
             engine.Inicializar();            
             imprimirCursosEscuela(engine.Escuela);
-            Printer.Beep(10000, cantidad: 5);
             imprimirEvaluaciones(engine.Escuela);
 
 
@@ -38,12 +37,12 @@ namespace CoreEscuela
             {
                 foreach (var curso in escuela.Cursos)
                 {
-                    foreach (var asignatura in curso.Asignaturas)
+                    foreach (var alumno in curso.Alumnos)
                     {
-                        foreach (var evaluacion in asignatura.Evaluaciones)
+                        foreach (var evaluacion in alumno.Evaluaciones)
                         {
                             Printer.DibujarLinea(50);
-                            WriteLine($"Asignatura: {asignatura.Nombre}");
+                            WriteLine($"Asignatura: {evaluacion.Asignatura.Nombre}");
                             WriteLine($"Nombre: {evaluacion.Nombre}, Alumno: {evaluacion.Alumno.Nombre}, Nota: {evaluacion.Nota}");
                         }
                     }

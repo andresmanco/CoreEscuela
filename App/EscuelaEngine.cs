@@ -19,23 +19,25 @@ namespace CoreEscuela
             CargarAsignaturas();
             CargarEvaluaciones();
         }
-
         private void CargarEvaluaciones()
         {
-            Random random = new Random();
-            var evaluaciones = new string[]{"Examen", "Exposicion", "Quiz", "Ensayo", "Final"};
+            var lista = new List<Evaluacion>();
             foreach (var curso in Escuela.Cursos)
             {
                 foreach (var asignatura in curso.Asignaturas)
                 {
-                    asignatura.Evaluaciones = new List<Evaluacion>();
                     foreach (var alumno in curso.Alumnos)
                     {
-                        foreach (var evaluacion in evaluaciones)
+                        var rnd = new Random(System.Environment.TickCount);
+                        for (int i = 0; i < 5; i++)
                         {
-                            System.Console.WriteLine(alumno.Nombre);
-                            asignatura.Evaluaciones.Add(new Evaluacion{ Nombre = evaluacion, Alumno = alumno, Asignatura = asignatura, Nota = NotaRandom(random)});
-                        }
+                            var ev = new Evaluacion{ 
+                                Nombre = $"{asignatura.Nombre} Ev#{i+1}", 
+                                Alumno = alumno, 
+                                Asignatura = asignatura, 
+                                Nota = NotaRandom(rnd)};
+                            alumno.Evaluaciones.Add(ev);
+                        }  
                     }
                 }
             }

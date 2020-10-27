@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Platzi\\DotNet\\Etapa1\\Etapa1.csproj": {}
+    "C:\\Users\\andre\\Platzi\\DotNet\\CoreEscuela\\Etapa1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Platzi\\DotNet\\Etapa1\\Etapa1.csproj": {
+    "C:\\Users\\andre\\Platzi\\DotNet\\CoreEscuela\\Etapa1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Platzi\\DotNet\\Etapa1\\Etapa1.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Platzi\\DotNet\\CoreEscuela\\Etapa1.csproj",
         "projectName": "Etapa1",
-        "projectPath": "C:\\Users\\andre\\Platzi\\DotNet\\Etapa1\\Etapa1.csproj",
+        "projectPath": "C:\\Users\\andre\\Platzi\\DotNet\\CoreEscuela\\Etapa1.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Platzi\\DotNet\\Etapa1\\obj\\",
+        "outputPath": "C:\\Users\\andre\\Platzi\\DotNet\\CoreEscuela\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
